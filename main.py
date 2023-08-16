@@ -1166,7 +1166,7 @@ if __name__ == "__main__":
                     note = staff_primitives[j+1].getPitch()
                     new_note = MIDI_to_pitch[pitch_to_MIDI[note] + 1] if accidental_type == "sharp" else MIDI_to_pitch[pitch_to_MIDI[note] - 1]
                     staff_primitives[j+1].setPitch(new_note)
-                    primitive_indices_to_remove.append(i)
+                    primitive_indices_to_remove.append(j)
 
         # Removed actioned accidentals
         for j in primitive_indices_to_remove:
